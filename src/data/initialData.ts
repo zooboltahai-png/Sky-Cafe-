@@ -1,0 +1,188 @@
+import { Product, BusinessSettings } from '../types';
+
+export const INITIAL_PRODUCTS: Product[] = [
+  {
+    id: 'prod-ciabatta-mozzarella',
+    name: 'Ciabatta Mozzarella',
+    category: 'ciabatta-sandwiches',
+    description: 'Crisp rustic Italian ciabatta filled with fresh fior di latte mozzarella, vine-ripened tomatoes, sweet fresh basil, and extra virgin olive oil.',
+    price: 8.50,
+    image: '/src/assets/images/food_ciabatta_mozzarella_1792764462342.jpg',
+    imageAlt: 'Toasted Italian ciabatta sandwich filled with melted fior di latte mozzarella, fresh tomatoes, and basil',
+    allergens: ['Gluten', 'Dairy'],
+    dietary: ['Vegetarian'],
+    available: true,
+    isHighlight: true
+  },
+  {
+    id: 'prod-avocado-poached-egg',
+    name: 'Avocado Toast with Poached Egg',
+    category: 'breakfast-brunch',
+    description: 'Artisan sourdough toast topped with seasoned smashed avocado, delicate poached egg, fresh microgreens, and cracked black pepper.',
+    price: 9.50,
+    image: '/src/assets/images/food_avocado_poached_egg_1792764460074.jpg',
+    imageAlt: 'Artisan sourdough toast topped with seasoned smashed avocado, delicate poached egg, and microgreens',
+    allergens: ['Gluten', 'Eggs'],
+    dietary: ['Vegetarian'],
+    available: true,
+    isHighlight: true
+  },
+  {
+    id: 'prod-smoked-salmon-croissant',
+    name: 'Smoked Salmon Croissant',
+    category: 'croissants',
+    description: 'Freshly baked flaky all-butter croissant filled with premium smoked salmon, whipped dill cream cheese, capers, and sea salt flakes.',
+    price: 9.80,
+    image: '/src/assets/images/food_salmon_croissant_1792764460900.jpg',
+    imageAlt: 'Freshly baked all-butter croissant filled with premium smoked salmon, whipped dill cream cheese, and capers',
+    allergens: ['Gluten', 'Dairy', 'Fish'],
+    dietary: ['Pescatarian'],
+    available: true,
+    isHighlight: true
+  },
+  {
+    id: 'prod-brownie-smoothie',
+    name: 'Brownie & Berry Smoothie',
+    category: 'desserts',
+    description: 'Warm artisan dark chocolate fudge brownie paired with a freshly blended chilled wild berry smoothie.',
+    price: 9.00,
+    image: '/src/assets/images/food_chocolate_brownie_1792772403143.jpg',
+    imageAlt: 'Decadent dark chocolate fudge brownie with warm chocolate drizzle and toasted walnuts',
+    allergens: ['Dairy', 'Eggs', 'Nuts (Optional)'],
+    dietary: ['Vegetarian'],
+    available: true,
+    isHighlight: true
+  },
+  {
+    id: 'prod-avocado-toast-croissant',
+    name: 'Avocado Toast Croissant',
+    category: 'croissants',
+    description: 'Warm, layered butter croissant filled with ripe avocado mash, sliced vine tomatoes, and toasted sesame.',
+    price: 8.50,
+    image: '/src/assets/images/food_avocado_croissant_1792772382193.jpg',
+    imageAlt: 'Flaky golden croissant sliced and layered with fresh ripe avocado slices, tomatoes, and herbs',
+    allergens: ['Gluten', 'Dairy', 'Sesame'],
+    dietary: ['Vegetarian'],
+    available: true,
+    isHighlight: true
+  },
+  {
+    id: 'prod-roasted-tomatoes-feta',
+    name: 'Roasted Tomatoes with Feta Cheese',
+    category: 'breakfast-brunch',
+    description: 'Slow-roasted Mediterranean sweet cherry tomatoes with Greek feta cheese, oregano, and olive oil on crusty sourdough.',
+    price: 8.90,
+    image: '/src/assets/images/food_roasted_tomatoes_feta_1792772382729.jpg',
+    imageAlt: 'Slow-roasted sweet cherry tomatoes with crumbled Greek feta cheese on rustic sourdough toast',
+    allergens: ['Gluten', 'Dairy'],
+    dietary: ['Vegetarian'],
+    available: true,
+    isHighlight: true
+  },
+  {
+    id: 'prod-avocado-toast-black-beans',
+    name: 'Avocado Toast with Black Beans',
+    category: 'breakfast-brunch',
+    description: 'Toasted artisan sourdough bread, zesty avocado spread, lightly spiced black beans, lime juice, and fresh coriander.',
+    price: 9.20,
+    image: '/src/assets/images/food_avocado_black_beans_1792772382665.jpg',
+    imageAlt: 'Artisan sourdough toast topped with smashed avocado, seasoned black beans, lime wedge, and fresh coriander',
+    allergens: ['Gluten'],
+    dietary: ['Vegetarian', 'Vegan'],
+    available: true,
+    isHighlight: true
+  },
+  {
+    id: 'prod-chicken-wrap-fries',
+    name: 'Chicken Wrap with Fries',
+    category: 'wraps',
+    description: 'Grilled tender seasoned chicken breast, crisp lettuce, tomato, and garlic herb sauce in a toasted tortilla wrap, served with golden fries.',
+    price: 11.50,
+    image: '/src/assets/images/food_chicken_wrap_fries_1792772381094.jpg',
+    imageAlt: 'Grilled seasoned chicken tortilla wrap cut diagonally, served with crispy golden french fries and garlic aioli',
+    allergens: ['Gluten'],
+    dietary: [],
+    available: true,
+    isHighlight: true
+  },
+  {
+    id: 'prod-flat-white',
+    name: 'Specialty Flat White',
+    category: 'coffee-hot',
+    description: 'Double shot of locally roasted espresso balanced with silky steamed microfoam milk in a ceramic cup.',
+    price: 3.20,
+    image: '/src/assets/images/food_flat_white_1792772378500.jpg',
+    imageAlt: 'Specialty flat white coffee with fine microfoam latte art in a dark ceramic cup on saucer',
+    allergens: ['Dairy (Oat / Almond alternative available)'],
+    dietary: ['Vegetarian'],
+    available: true,
+    isHighlight: false
+  },
+  {
+    id: 'prod-artisan-cappuccino',
+    name: 'Artisan Cappuccino',
+    category: 'coffee-hot',
+    description: 'Rich espresso topped with velvety foamed milk and a dusting of pure Dutch cocoa.',
+    price: 3.00,
+    image: '/src/assets/images/food_artisan_cappuccino_1792772380261.jpg',
+    imageAlt: 'Artisan cappuccino in a ceramic cup with a thick foamy milk head dusted with Dutch cocoa powder',
+    allergens: ['Dairy'],
+    dietary: ['Vegetarian'],
+    available: true,
+    isHighlight: false
+  },
+  {
+    id: 'prod-fresh-berry-smoothie',
+    name: 'Wild Berry Antioxidant Smoothie',
+    category: 'cold-smoothies',
+    description: '100% natural smoothie made with blended strawberries, blueberries, raspberries, banana, and chilled oat milk.',
+    price: 5.50,
+    image: '/src/assets/images/food_wild_berry_smoothie_1792772379979.jpg',
+    imageAlt: 'Chilled vibrant purple wild berry antioxidant smoothie in a glass jar garnished with raspberries and blueberries',
+    allergens: [],
+    dietary: ['Vegan', 'Vegetarian'],
+    available: true,
+    isHighlight: false
+  },
+  {
+    id: 'prod-fresh-orange-juice',
+    name: 'Freshly Squeezed Orange Juice',
+    category: 'cold-smoothies',
+    description: 'Cold-pressed 100% fresh sweet oranges, poured directly over ice.',
+    price: 4.50,
+    image: '/src/assets/images/food_fresh_orange_juice_1792772380689.jpg',
+    imageAlt: 'Tall glass of freshly squeezed chilled orange juice with ice and orange slices on a sunlit counter',
+    allergens: [],
+    dietary: ['Vegan', 'Vegetarian'],
+    available: true,
+    isHighlight: false
+  }
+];
+
+export const INITIAL_SETTINGS: BusinessSettings = {
+  name: 'Skyline Cafe Malta',
+  tagline: 'Artisan Mediterranean Cafe along the Sliema Promenade',
+  phone: '+356 9996 6313',
+  address: 'Triq Ix-Xatt',
+  locality: 'Tas-Sliema',
+  postalCode: 'SLM 3113',
+  country: 'Malta',
+  currency: 'EUR',
+  googleRating: 4.9,
+  googleReviewCount: 104,
+  typicalSpend: '€10–€20 per person',
+  takeawayEnabled: true,
+  deliveryEnabled: false, // Explicitly marked unverified as per brief instructions
+  openingHours: {
+    monday: '07:30 – 19:00',
+    tuesday: '07:30 – 19:00',
+    wednesday: '07:30 – 19:00',
+    thursday: '07:30 – 19:00',
+    friday: '07:30 – 19:30',
+    saturday: '07:30 – 19:30',
+    sunday: '08:00 – 19:00'
+  },
+  minimumOrderAmount: 0,
+  takeawayPackagingFee: 0,
+  adminPin: '1234' // Owner configurable PIN for admin access
+};

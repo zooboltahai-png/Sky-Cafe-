@@ -1,0 +1,6 @@
+{
+  "name": "Skyline Cafe Malta",
+  "description": "Artisan Mediterranean cafe along the Sliema waterfront in Malta. Specialty coffee, breakfast, brunch, and online takeaway ordering.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
