@@ -3,6 +3,27 @@
 @theme {
   --font-serif: "Playfair Display", Georgia, serif;
   --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  
+  /* Skyline Cafe Brand Palette extracted from official logo */
+  --color-brand-green: #D9F3CC;
+  --color-brand-green-light: #F2FAF0;
+  --color-brand-green-dark: #A8DCA2;
+  --color-brand-burgundy: #5C1D38;
+  --color-brand-burgundy-dark: #3D1225;
+  --color-brand-burgundy-light: #7A274C;
+  --color-brand-peach: #E58869;
+  --color-brand-peach-light: #FDF4EE;
+  --color-brand-peach-dark: #CE6E4E;
+  --color-brand-cream: #FAF9F5;
+}
+
+:root {
+  --brand-green: #D9F3CC;
+  --brand-green-light: #F2FAF0;
+  --brand-burgundy: #5C1D38;
+  --brand-burgundy-dark: #3D1225;
+  --brand-peach: #E58869;
+  --brand-cream: #FAF9F5;
 }
 
 @layer base {

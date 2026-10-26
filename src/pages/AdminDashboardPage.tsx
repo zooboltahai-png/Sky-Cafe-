@@ -352,7 +352,7 @@ export const AdminDashboardPage: React.FC = () => {
                       category: 'breakfast-brunch',
                       description: '',
                       price: 8.50,
-                      image: '/src/assets/images/food_avocado_poached_egg_1792764460074.jpg',
+                      image: '/images/menu/food_avocado_poached_egg_1792764460074.jpg',
                       imageAlt: '',
                       allergens: [],
                       dietary: ['Vegetarian'],
@@ -399,12 +399,16 @@ export const AdminDashboardPage: React.FC = () => {
                       className="w-full p-2.5 bg-stone-50 border border-stone-300 rounded text-sm text-stone-900"
                     >
                       <option value="breakfast-brunch">Breakfast & Brunch</option>
-                      <option value="ciabatta-sandwiches">Ciabatta & Sandwiches</option>
-                      <option value="croissants">Croissants</option>
-                      <option value="wraps">Wraps & Mains</option>
+                      <option value="croissants">Artisan Croissants</option>
+                      <option value="sandwiches-wraps">Sandwiches & Wraps</option>
+                      <option value="salads-soup">Salads & Soup</option>
+                      <option value="platters-nibbles">Platters & Nibbles</option>
+                      <option value="desserts">Desserts & Gelato</option>
                       <option value="coffee-hot">Coffee & Hot Drinks</option>
-                      <option value="cold-smoothies">Cold Drinks & Smoothies</option>
-                      <option value="desserts">Desserts</option>
+                      <option value="smoothies-shakes">Smoothies & Shakes</option>
+                      <option value="cold-drinks">Water & Soft Drinks</option>
+                      <option value="cocktails-spritzers">Spritzers & Cocktails</option>
+                      <option value="wine-beer">Wines & Beers</option>
                     </select>
                   </div>
 
@@ -450,7 +454,7 @@ export const AdminDashboardPage: React.FC = () => {
                           referrerPolicy="no-referrer"
                           className="w-full h-full object-cover"
                           onError={(e) => {
-                            (e.currentTarget as HTMLImageElement).src = '/src/assets/images/skyline_hero_sliema_1792764460169.jpg';
+                            (e.currentTarget as HTMLImageElement).src = '/images/brand/skyline_hero_sliema.jpg';
                           }}
                         />
                       </div>
@@ -486,18 +490,18 @@ export const AdminDashboardPage: React.FC = () => {
                         <span className="text-[11px] font-semibold text-stone-500 block mb-1.5">Quick Select Verified Photo Preset:</span>
                         <div className="flex flex-wrap gap-1.5">
                           {[
-                            { name: 'Flat White', path: '/src/assets/images/food_flat_white_1792772378500.jpg', alt: 'Specialty flat white coffee with fine microfoam latte art' },
-                            { name: 'Cappuccino', path: '/src/assets/images/food_artisan_cappuccino_1792772380261.jpg', alt: 'Artisan cappuccino dusted with Dutch cocoa powder' },
-                            { name: 'Berry Smoothie', path: '/src/assets/images/food_wild_berry_smoothie_1792772379979.jpg', alt: 'Chilled wild berry antioxidant smoothie with fresh berries' },
-                            { name: 'Orange Juice', path: '/src/assets/images/food_fresh_orange_juice_1792772380689.jpg', alt: 'Freshly squeezed chilled orange juice with ice' },
-                            { name: 'Poached Egg Toast', path: '/src/assets/images/food_avocado_poached_egg_1792764460074.jpg', alt: 'Sourdough toast with avocado, poached egg, and microgreens' },
-                            { name: 'Salmon Croissant', path: '/src/assets/images/food_salmon_croissant_1792764460900.jpg', alt: 'Croissant with smoked salmon, cream cheese, and capers' },
-                            { name: 'Ciabatta Mozzarella', path: '/src/assets/images/food_ciabatta_mozzarella_1792764462342.jpg', alt: 'Toasted ciabatta with melted mozzarella, tomato, and basil' },
-                            { name: 'Fudge Brownie', path: '/src/assets/images/food_chocolate_brownie_1792772403143.jpg', alt: 'Dark chocolate fudge brownie with chocolate drizzle and walnuts' },
-                            { name: 'Avocado Croissant', path: '/src/assets/images/food_avocado_croissant_1792772382193.jpg', alt: 'Butter croissant filled with fresh avocado and sliced tomatoes' },
-                            { name: 'Roasted Tomatoes Feta', path: '/src/assets/images/food_roasted_tomatoes_feta_1792772382729.jpg', alt: 'Roasted cherry tomatoes with Greek feta cheese on sourdough' },
-                            { name: 'Black Beans Toast', path: '/src/assets/images/food_avocado_black_beans_1792772382665.jpg', alt: 'Sourdough toast with avocado and seasoned black beans' },
-                            { name: 'Chicken Wrap & Fries', path: '/src/assets/images/food_chicken_wrap_fries_1792772381094.jpg', alt: 'Grilled chicken tortilla wrap with crispy french fries' }
+                            { name: 'Flat White', path: '/images/menu/food_flat_white_1792772378500.jpg', alt: 'Specialty flat white coffee with fine microfoam latte art' },
+                            { name: 'Cappuccino', path: '/images/menu/food_artisan_cappuccino_1792772380261.jpg', alt: 'Artisan cappuccino dusted with Dutch cocoa powder' },
+                            { name: 'Berry Smoothie', path: '/images/menu/food_wild_berry_smoothie_1792772379979.jpg', alt: 'Chilled wild berry antioxidant smoothie with fresh berries' },
+                            { name: 'Orange Juice', path: '/images/menu/food_fresh_orange_juice_1792772380689.jpg', alt: 'Freshly squeezed chilled orange juice with ice' },
+                            { name: 'Poached Egg Toast', path: '/images/menu/food_avocado_poached_egg_1792764460074.jpg', alt: 'Sourdough toast with avocado, poached egg, and microgreens' },
+                            { name: 'Salmon Croissant', path: '/images/menu/food_salmon_croissant_1792764460900.jpg', alt: 'Croissant with smoked salmon, cream cheese, and capers' },
+                            { name: 'Ciabatta Mozzarella', path: '/images/menu/food_ciabatta_mozzarella_1792764462342.jpg', alt: 'Toasted ciabatta with melted mozzarella, tomato, and basil' },
+                            { name: 'Fudge Brownie', path: '/images/menu/food_chocolate_brownie_1792772403143.jpg', alt: 'Dark chocolate fudge brownie with chocolate drizzle and walnuts' },
+                            { name: 'Avocado Croissant', path: '/images/menu/food_avocado_croissant_1792772382193.jpg', alt: 'Butter croissant filled with fresh avocado and sliced tomatoes' },
+                            { name: 'Roasted Tomatoes Feta', path: '/images/menu/food_roasted_tomatoes_feta_1792772382729.jpg', alt: 'Roasted cherry tomatoes with Greek feta cheese on sourdough' },
+                            { name: 'Black Beans Toast', path: '/images/menu/food_avocado_black_beans_1792772382665.jpg', alt: 'Sourdough toast with avocado and seasoned black beans' },
+                            { name: 'Chicken Wrap & Fries', path: '/images/menu/food_chicken_wrap_fries_1792772381094.jpg', alt: 'Grilled chicken tortilla wrap with crispy french fries' }
                           ].map((preset) => (
                             <button
                               key={preset.name}
@@ -567,6 +571,9 @@ export const AdminDashboardPage: React.FC = () => {
                       alt={p.name}
                       referrerPolicy="no-referrer"
                       className="w-12 h-12 rounded object-cover bg-stone-100 shrink-0"
+                      onError={(e) => {
+                        (e.currentTarget as HTMLImageElement).src = '/images/brand/skyline_hero_sliema.jpg';
+                      }}
                     />
                     <div>
                       <div className="flex items-center gap-2">

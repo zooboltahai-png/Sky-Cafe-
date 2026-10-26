@@ -129,7 +129,7 @@ export const TrackOrderPage: React.FC = () => {
           <div className="pt-2 flex justify-end">
             <button
               type="submit"
-              className="px-6 py-2.5 bg-stone-900 hover:bg-stone-800 text-white rounded-lg text-xs font-semibold uppercase tracking-wider transition-colors cursor-pointer"
+              className="w-full sm:w-auto px-6 py-2.5 bg-brand-burgundy hover:bg-brand-burgundy-dark text-white rounded-lg text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer"
             >
               Check Status
             </button>

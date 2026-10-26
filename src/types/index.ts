@@ -1,12 +1,26 @@
 export type ProductCategory = 
   | 'all'
   | 'breakfast-brunch'
-  | 'ciabatta-sandwiches'
   | 'croissants'
+  | 'sandwiches-wraps'
+  | 'salads-soup'
+  | 'platters-nibbles'
+  | 'desserts'
   | 'coffee-hot'
+  | 'smoothies-shakes'
+  | 'cold-drinks'
+  | 'cocktails-spritzers'
+  | 'wine-beer'
+  // Legacy aliases for backward compatibility
+  | 'ciabatta-sandwiches'
   | 'cold-smoothies'
-  | 'wraps'
-  | 'desserts';
+  | 'wraps';
+
+export interface ProductOption {
+  name: string;
+  priceModifier: number; // e.g. +3.00 for Parma Ham
+  isDefault?: boolean;
+}
 
 export interface Product {
   id: string;
@@ -14,17 +28,23 @@ export interface Product {
   category: ProductCategory;
   description: string;
   price: number; // in EUR
+  priceLabel?: string; // e.g. "from €9.50" or "€2.75 / €3.95"
+  currency?: 'EUR';
   image: string;
-  imageAlt: string;
-  allergens?: string[];
-  dietary?: ('Vegetarian' | 'Vegan' | 'Gluten-Free Option' | 'Contains Nuts' | 'Pescatarian')[];
+  imageAlt?: string;
+  allergens?: string[]; // exact codes from menu, e.g. ["Tn", "M", "G"]
+  options?: ProductOption[];
+  dietary?: ('Vegetarian' | 'Vegan' | 'Gluten-Free Option' | 'Contains Nuts' | 'Pescatarian' | string)[];
   available: boolean;
+  sortOrder?: number;
   isHighlight?: boolean;
 }
 
 export interface CartItem {
   product: Product;
   quantity: number;
+  selectedOptions?: ProductOption[];
+  unitPrice?: number;
   notes?: string;
 }
 
@@ -41,6 +61,7 @@ export interface OrderItem {
   name: string;
   price: number;
   quantity: number;
+  selectedOptions?: string;
   notes?: string;
 }
 

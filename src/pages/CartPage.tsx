@@ -79,15 +79,20 @@ export const CartPage: React.FC = () => {
                       referrerPolicy="no-referrer"
                       className="w-16 h-16 rounded-lg object-cover bg-stone-100 shrink-0"
                       onError={(e) => {
-                        (e.currentTarget as HTMLImageElement).src = '/src/assets/images/skyline_hero_sliema_1792764460169.jpg';
+                        (e.currentTarget as HTMLImageElement).src = '/images/brand/skyline_hero_sliema.jpg';
                       }}
                     />
                     <div>
                       <h3 className="font-editorial text-base font-bold text-stone-900">
                         {item.product.name}
                       </h3>
+                      {item.selectedOptions && item.selectedOptions.length > 0 && (
+                        <div className="text-[11px] text-amber-800 font-medium">
+                          {item.selectedOptions.map(o => `${o.name} (${o.priceModifier > 0 ? `+€${o.priceModifier.toFixed(2)}` : 'included'})`).join(', ')}
+                        </div>
+                      )}
                       <span className="text-xs text-stone-500 tabular-nums">
-                        €{item.product.price.toFixed(2)} each
+                        €{(item.unitPrice !== undefined ? item.unitPrice : item.product.price).toFixed(2)} each
                       </span>
                       {item.notes && (
                         <p className="text-[11px] text-stone-400 mt-0.5">Note: {item.notes}</p>
@@ -100,7 +105,10 @@ export const CartPage: React.FC = () => {
                     <div className="flex items-center gap-1.5 bg-stone-100 rounded-lg p-1">
                       <button
                         type="button"
-                        onClick={() => updateCartQuantity(item.product.id, item.quantity - 1)}
+                        onClick={() => {
+                          const optKey = (item.selectedOptions || []).map(o => `${o.name}:${o.priceModifier}`).sort().join('|');
+                          updateCartQuantity(item.product.id, item.quantity - 1, optKey);
+                        }}
                         className="p-1 text-stone-600 hover:text-stone-900 rounded cursor-pointer"
                         aria-label={`Decrease ${item.product.name}`}
                       >
@@ -109,7 +117,10 @@ export const CartPage: React.FC = () => {
                       <span className="font-bold text-xs px-2 tabular-nums">{item.quantity}</span>
                       <button
                         type="button"
-                        onClick={() => updateCartQuantity(item.product.id, item.quantity + 1)}
+                        onClick={() => {
+                          const optKey = (item.selectedOptions || []).map(o => `${o.name}:${o.priceModifier}`).sort().join('|');
+                          updateCartQuantity(item.product.id, item.quantity + 1, optKey);
+                        }}
                         className="p-1 text-stone-600 hover:text-stone-900 rounded cursor-pointer"
                         aria-label={`Increase ${item.product.name}`}
                       >
@@ -119,13 +130,16 @@ export const CartPage: React.FC = () => {
 
                     {/* Subtotal */}
                     <span className="font-bold text-sm text-stone-900 tabular-nums min-w-[70px] text-right">
-                      €{(item.product.price * item.quantity).toFixed(2)}
+                      €{(((item.unitPrice !== undefined ? item.unitPrice : item.product.price)) * item.quantity).toFixed(2)}
                     </span>
 
                     {/* Remove */}
                     <button
                       type="button"
-                      onClick={() => removeFromCart(item.product.id)}
+                      onClick={() => {
+                        const optKey = (item.selectedOptions || []).map(o => `${o.name}:${o.priceModifier}`).sort().join('|');
+                        removeFromCart(item.product.id, optKey);
+                      }}
                       className="text-stone-400 hover:text-red-600 p-1.5 transition-colors cursor-pointer"
                       aria-label="Remove item"
                     >
@@ -169,7 +183,7 @@ export const CartPage: React.FC = () => {
               <button
                 type="button"
                 onClick={() => navigate('/checkout')}
-                className="w-full flex items-center justify-center gap-2 py-3.5 bg-stone-900 hover:bg-stone-800 text-white font-semibold uppercase tracking-wider text-xs rounded-lg transition-colors cursor-pointer shadow-sm active:scale-[0.99]"
+                className="w-full flex items-center justify-center gap-2 py-3.5 bg-brand-burgundy hover:bg-brand-burgundy-dark text-white font-bold uppercase tracking-wider text-xs rounded-lg transition-colors cursor-pointer shadow-sm active:scale-[0.99]"
               >
                 <span>Proceed to Details</span>
                 <ArrowRight className="w-4 h-4" />

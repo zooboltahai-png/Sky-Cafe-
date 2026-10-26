@@ -33,7 +33,7 @@ export const HomePage: React.FC = () => {
         {/* Ambient background with photography */}
         <div className="absolute inset-0 z-0">
           <img
-            src="/src/assets/images/skyline_hero_sliema_1792764460169.jpg"
+            src="/images/brand/skyline_hero_sliema.jpg"
             alt="Skyline Cafe Malta waterfront terrace overlooking Marsamxett harbour"
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover object-center opacity-40 scale-105 transition-transform duration-1000 ease-out"
@@ -133,10 +133,13 @@ export const HomePage: React.FC = () => {
                       src={item.image}
                       alt={item.imageAlt || item.name}
                       loading="lazy"
+                      decoding="async"
+                      width={400}
+                      height={300}
                       referrerPolicy="no-referrer"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                       onError={(e) => {
-                        (e.currentTarget as HTMLImageElement).src = '/src/assets/images/skyline_hero_sliema_1792764460169.jpg';
+                        (e.currentTarget as HTMLImageElement).src = '/images/brand/skyline_hero_sliema.jpg';
                       }}
                     />
                     <div className="absolute top-3 right-3 px-2 py-1 bg-stone-900/80 backdrop-blur-xs text-white text-xs font-semibold rounded tabular-nums">
@@ -172,7 +175,7 @@ export const HomePage: React.FC = () => {
                       addedId === item.id
                         ? 'bg-emerald-700 text-white'
                         : item.available
-                        ? 'bg-stone-900 hover:bg-stone-800 text-white active:scale-[0.98]'
+                        ? 'bg-brand-burgundy hover:bg-brand-burgundy-dark text-white active:scale-[0.98]'
                         : 'bg-stone-200 text-stone-400 cursor-not-allowed'
                     }`}
                   >
@@ -245,13 +248,13 @@ export const HomePage: React.FC = () => {
             <div className="relative">
               <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border border-stone-200 bg-stone-200">
                 <img
-                  src="/src/assets/images/food_salmon_croissant_1792764460900.jpg"
+                  src="/images/menu/food_salmon_croissant_1792764460900.jpg"
                   alt="Freshly baked all-butter croissant with smoked salmon and cream cheese"
                   loading="lazy"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover hover:scale-102 transition-transform duration-700"
                   onError={(e) => {
-                    (e.currentTarget as HTMLImageElement).src = '/src/assets/images/skyline_hero_sliema_1792764460169.jpg';
+                    (e.currentTarget as HTMLImageElement).src = '/images/brand/skyline_hero_sliema.jpg';
                   }}
                 />
               </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Clock, Star, ShieldCheck } from 'lucide-react';
 import { getSettings } from '../services/store';
+import { SkylineLogo } from './SkylineLogo';
 
 interface FooterProps {
   onOpenCookies?: () => void;
@@ -17,9 +18,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenCookies }) => {
           
           {/* Column 1: Brand & Verified Facts */}
           <div className="space-y-4">
-            <h3 className="font-editorial text-2xl font-bold text-white tracking-tight">
-              Skyline Cafe Malta
-            </h3>
+            <Link to="/" className="inline-block focus:outline-none">
+              <SkylineLogo size="md" textColor="text-white" subtextColor="text-stone-400" />
+            </Link>
             <p className="text-sm text-stone-400 leading-relaxed">
               Contemporary Mediterranean cafe along the Sliema waterfront. Specialty coffee, artisan ciabatta, breakfast, and brunch.
             </p>

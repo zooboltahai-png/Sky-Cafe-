@@ -299,16 +299,24 @@ export const CheckoutPage: React.FC = () => {
               </h3>
 
               <div className="space-y-3 max-h-60 overflow-y-auto pr-1 text-xs">
-                {cart.map((item) => (
-                  <div key={item.product.id} className="flex justify-between gap-2">
-                    <span className="text-stone-700">
-                      {item.quantity}× {item.product.name}
-                    </span>
-                    <span className="font-semibold text-stone-900 tabular-nums shrink-0">
-                      €{(item.product.price * item.quantity).toFixed(2)}
-                    </span>
-                  </div>
-                ))}
+                {cart.map((item, idx) => {
+                  const unitPrice = item.unitPrice !== undefined ? item.unitPrice : item.product.price;
+                  return (
+                    <div key={`${item.product.id}-${idx}`} className="flex justify-between gap-2">
+                      <div className="text-stone-700 min-w-0">
+                        <span className="block truncate">{item.quantity}× {item.product.name}</span>
+                        {item.selectedOptions && item.selectedOptions.length > 0 && (
+                          <span className="block text-[10px] text-amber-800">
+                            +{item.selectedOptions.map(o => o.name).join(', ')}
+                          </span>
+                        )}
+                      </div>
+                      <span className="font-semibold text-stone-900 tabular-nums shrink-0">
+                        €{(unitPrice * item.quantity).toFixed(2)}
+                      </span>
+                    </div>
+                  );
+                })}
               </div>
 
               <div className="pt-3 border-t border-stone-200 space-y-1.5 text-xs text-stone-600">
@@ -331,10 +339,10 @@ export const CheckoutPage: React.FC = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full py-3.5 rounded-lg text-xs font-semibold uppercase tracking-wider text-white transition-all cursor-pointer ${
+                className={`w-full py-3.5 rounded-lg text-xs font-bold uppercase tracking-wider text-white transition-all cursor-pointer ${
                   isSubmitting
                     ? 'bg-stone-500 cursor-wait'
-                    : 'bg-stone-900 hover:bg-stone-800 active:scale-[0.99] shadow-sm'
+                    : 'bg-brand-burgundy hover:bg-brand-burgundy-dark active:scale-[0.99] shadow-sm'
                 }`}
               >
                 {isSubmitting ? 'Placing Order...' : `Place Takeaway Order · €${total.toFixed(2)}`}

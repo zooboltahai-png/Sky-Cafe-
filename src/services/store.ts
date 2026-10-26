@@ -1,8 +1,8 @@
-import { Product, BusinessSettings, CartItem, Order, OrderStatus, ContactMessage, CookiePreferences } from '../types';
+import { Product, BusinessSettings, CartItem, Order, OrderStatus, ContactMessage, CookiePreferences, ProductOption } from '../types';
 import { INITIAL_PRODUCTS, INITIAL_SETTINGS } from '../data/initialData';
 
 const STORAGE_KEYS = {
-  PRODUCTS: 'skyline_products_v2',
+  PRODUCTS: 'skyline_products_v6',
   SETTINGS: 'skyline_settings_v1',
   CART: 'skyline_cart_v1',
   ORDERS: 'skyline_orders_v1',
@@ -35,13 +35,26 @@ export function getProducts(): Product[] {
     }
     const parsed: Product[] = JSON.parse(raw);
     
+    // Always ensure all initial products exist and have latest exact menu descriptions & allergen codes
+    if (parsed.length < INITIAL_PRODUCTS.length) {
+      localStorage.setItem(STORAGE_KEYS.PRODUCTS, JSON.stringify(INITIAL_PRODUCTS));
+      return INITIAL_PRODUCTS;
+    }
+    
     // Normalize and ensure each product has valid image and imageAlt
     const normalized = parsed.map(p => {
       const initial = INITIAL_PRODUCTS.find(i => i.id === p.id);
+      let img = p.image || (initial ? initial.image : '/images/brand/skyline_hero_sliema.jpg');
+      if (img.startsWith('/src/assets/images/')) {
+        img = img.replace('/src/assets/images/', '/images/menu/');
+      }
       return {
         ...p,
-        image: p.image || (initial ? initial.image : '/src/assets/images/skyline_hero_sliema_1792764460169.jpg'),
-        imageAlt: p.imageAlt || (initial ? initial.imageAlt : p.name)
+        image: img,
+        imageAlt: p.imageAlt || (initial ? initial.imageAlt : p.name),
+        allergens: p.allergens || (initial ? initial.allergens : []),
+        options: p.options || (initial ? initial.options : undefined),
+        priceLabel: p.priceLabel || (initial ? initial.priceLabel : undefined)
       };
     });
     return normalized;
@@ -112,33 +125,72 @@ export function getCart(): CartItem[] {
   }
 }
 
-export function addToCart(product: Product, quantity = 1, notes?: string): void {
+export function addToCart(
+  product: Product, 
+  quantity = 1, 
+  notes?: string, 
+  selectedOptions?: ProductOption[]
+): void {
   const cart = getCart();
-  const existingIndex = cart.findIndex(item => item.product.id === product.id);
+  const optionsKey = selectedOptions && selectedOptions.length > 0 
+    ? selectedOptions.map(o => `${o.name}:${o.priceModifier}`).sort().join('|') 
+    : '';
+  
+  const optionAddons = (selectedOptions || []).reduce((acc, opt) => acc + opt.priceModifier, 0);
+  const unitPrice = product.price + optionAddons;
+
+  const existingIndex = cart.findIndex(item => {
+    const itemOptionsKey = item.selectedOptions && item.selectedOptions.length > 0
+      ? item.selectedOptions.map(o => `${o.name}:${o.priceModifier}`).sort().join('|')
+      : '';
+    return item.product.id === product.id && itemOptionsKey === optionsKey;
+  });
+
   if (existingIndex > -1) {
     cart[existingIndex].quantity += quantity;
     if (notes) cart[existingIndex].notes = notes;
   } else {
-    cart.push({ product, quantity, notes });
+    cart.push({ product, quantity, notes, selectedOptions, unitPrice });
   }
   localStorage.setItem(STORAGE_KEYS.CART, JSON.stringify(cart));
   notifyListeners();
 }
 
-export function updateCartQuantity(productId: string, quantity: number): void {
+export function updateCartQuantity(productId: string, quantity: number, optionsKey?: string): void {
   let cart = getCart();
   if (quantity <= 0) {
-    cart = cart.filter(item => item.product.id !== productId);
+    cart = cart.filter(item => {
+      if (item.product.id !== productId) return true;
+      if (optionsKey !== undefined) {
+        const itemKey = (item.selectedOptions || []).map(o => `${o.name}:${o.priceModifier}`).sort().join('|');
+        return itemKey !== optionsKey;
+      }
+      return false;
+    });
   } else {
-    const item = cart.find(i => i.product.id === productId);
+    const item = cart.find(i => {
+      if (i.product.id !== productId) return false;
+      if (optionsKey !== undefined) {
+        const itemKey = (i.selectedOptions || []).map(o => `${o.name}:${o.priceModifier}`).sort().join('|');
+        return itemKey === optionsKey;
+      }
+      return true;
+    });
     if (item) item.quantity = quantity;
   }
   localStorage.setItem(STORAGE_KEYS.CART, JSON.stringify(cart));
   notifyListeners();
 }
 
-export function removeFromCart(productId: string): void {
-  const cart = getCart().filter(item => item.product.id !== productId);
+export function removeFromCart(productId: string, optionsKey?: string): void {
+  const cart = getCart().filter(item => {
+    if (item.product.id !== productId) return true;
+    if (optionsKey !== undefined) {
+      const itemKey = (item.selectedOptions || []).map(o => `${o.name}:${o.priceModifier}`).sort().join('|');
+      return itemKey !== optionsKey;
+    }
+    return false;
+  });
   localStorage.setItem(STORAGE_KEYS.CART, JSON.stringify(cart));
   notifyListeners();
 }
@@ -152,10 +204,11 @@ export function getCartSubtotal(): number {
   const cart = getCart();
   const products = getProducts();
   return cart.reduce((sum, item) => {
-    // Trusted price resolution from current catalog
     const currentProd = products.find(p => p.id === item.product.id);
-    const price = currentProd ? currentProd.price : item.product.price;
-    return sum + (price * item.quantity);
+    const basePrice = currentProd ? currentProd.price : item.product.price;
+    const optionAddons = (item.selectedOptions || []).reduce((acc, opt) => acc + opt.priceModifier, 0);
+    const itemPrice = item.unitPrice !== undefined ? item.unitPrice : (basePrice + optionAddons);
+    return sum + (itemPrice * item.quantity);
   }, 0);
 }
 
@@ -195,13 +248,19 @@ export function createOrder(data: {
     if (!catalogItem || !catalogItem.available) {
       throw new Error(`Item ${item.product.name} is currently unavailable.`);
     }
-    const itemSubtotal = catalogItem.price * item.quantity;
+    const optionAddons = (item.selectedOptions || []).reduce((acc, opt) => acc + opt.priceModifier, 0);
+    const unitPrice = catalogItem.price + optionAddons;
+    const itemSubtotal = unitPrice * item.quantity;
     verifiedSubtotal += itemSubtotal;
+    const optionsText = item.selectedOptions && item.selectedOptions.length > 0
+      ? item.selectedOptions.map(o => o.name).join(', ')
+      : undefined;
     return {
       productId: catalogItem.id,
-      name: catalogItem.name,
-      price: catalogItem.price,
+      name: optionsText ? `${catalogItem.name} (${optionsText})` : catalogItem.name,
+      price: unitPrice,
       quantity: item.quantity,
+      selectedOptions: optionsText,
       notes: item.notes
     };
   });

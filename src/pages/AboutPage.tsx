@@ -24,25 +24,25 @@ export const AboutPage: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
           <div className="rounded-2xl overflow-hidden shadow-md bg-stone-200 aspect-[4/3] md:aspect-auto">
             <img
-              src="/src/assets/images/skyline_hero_sliema_1792764460169.jpg"
+              src="/images/brand/skyline_hero_sliema.jpg"
               alt="Sliema waterfront cafe terrace overlooking Marsamxett harbour"
               loading="lazy"
               referrerPolicy="no-referrer"
               className="w-full h-full object-cover"
               onError={(e) => {
-                (e.currentTarget as HTMLImageElement).src = '/src/assets/images/skyline_hero_sliema_1792764460169.jpg';
+                (e.currentTarget as HTMLImageElement).src = '/images/brand/skyline_hero_sliema.jpg';
               }}
             />
           </div>
           <div className="rounded-2xl overflow-hidden shadow-md bg-stone-200 aspect-[4/3] md:aspect-auto">
             <img
-              src="/src/assets/images/food_avocado_poached_egg_1792764460074.jpg"
+              src="/images/menu/food_avocado_poached_egg_1792764460074.jpg"
               alt="Avocado toast with poached egg at Skyline Cafe Malta"
               loading="lazy"
               referrerPolicy="no-referrer"
               className="w-full h-full object-cover"
               onError={(e) => {
-                (e.currentTarget as HTMLImageElement).src = '/src/assets/images/skyline_hero_sliema_1792764460169.jpg';
+                (e.currentTarget as HTMLImageElement).src = '/images/brand/skyline_hero_sliema.jpg';
               }}
             />
           </div>
