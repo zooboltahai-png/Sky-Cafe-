@@ -1,0 +1,725 @@
+[
+  {
+    "id": "prod-chicken-pesto-salad",
+    "name": "Chicken Pesto Salad",
+    "slug": "chicken-pesto-salad",
+    "image": "/images/menu/chicken-pesto-salad.webp",
+    "alt": "Grilled chicken pesto salad with mixed greens, cherry tomatoes, and almonds",
+    "sizeKb": 117,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-greek-salad",
+    "name": "Greek Salad",
+    "slug": "greek-salad",
+    "image": "/images/menu/greek-salad.webp",
+    "alt": "Traditional Greek salad with feta cheese block, Kalamata olives, and fresh oregano",
+    "sizeKb": 90,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-barley-salad",
+    "name": "Barley Salad",
+    "slug": "barley-salad",
+    "image": "/images/menu/barley-salad.webp",
+    "alt": "Nutritious pearl barley nourish bowl with chickpeas, avocado, and tahini",
+    "sizeKb": 91,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-soup-of-the-day",
+    "name": "Soup of the Day",
+    "slug": "soup-of-the-day",
+    "image": "/images/menu/soup-of-the-day.webp",
+    "alt": "Artisanal bowl of chef soup with fresh herbs and crusty sourdough",
+    "sizeKb": 78,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-antipasto-platter",
+    "name": "Antipasto Platter",
+    "slug": "antipasto-platter",
+    "image": "/images/menu/antipasto-platter.webp",
+    "alt": "Antipasto charcuterie sharing board with Italian cured meats, artisan cheeses, and olives",
+    "sizeKb": 49,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-cheese-board",
+    "name": "Cheese Board",
+    "slug": "cheese-board",
+    "image": "/images/menu/cheese-board.webp",
+    "alt": "Artisanal cheese board selection with mango chutney, crackers, and grapes",
+    "sizeKb": 101,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-dips-crudites",
+    "name": "Dips & Crudites",
+    "slug": "dips-crudites",
+    "image": "/images/menu/dips-crudites.webp",
+    "alt": "Freshly cut rainbow vegetable crudites served with Mediterranean dips and galletti",
+    "sizeKb": 92,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-bouyiourdi",
+    "slug": "bouyiourdi",
+    "status": "VERIFIED",
+    "image": "/images/menu/bouyiourdi.webp",
+    "sizeKb": 100
+  },
+  {
+    "id": "prod-crepe-bites",
+    "name": "Cheese & Onion Crêpe Bites",
+    "slug": "cheese-onion-crepe-bites",
+    "image": "/images/menu/cheese-onion-crepe-bites.webp",
+    "alt": "Warm savory crepe bites filled with caramelized onions, cheddar, and bechamel",
+    "sizeKb": 33,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-garden-bruschetta",
+    "name": "Garden Bruschetta",
+    "slug": "garden-bruschetta",
+    "image": "/images/menu/garden-bruschetta.webp",
+    "alt": "Toasted artisan sourdough bruschetta topped with marinated heirloom tomatoes, basil, and olive oil",
+    "sizeKb": 41,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-crepes-hazelnut",
+    "name": "Crêpes with Hazelnut Spread & Strawberries",
+    "slug": "crepes-hazelnut-strawberries",
+    "image": "/images/menu/crepes-hazelnut-strawberries.webp",
+    "alt": "Warm French crepes folded with hazelnut chocolate spread and fresh sliced strawberries",
+    "sizeKb": 72,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-crepes-honey-orange",
+    "name": "Crêpes with Honey & Orange",
+    "slug": "crepes-honey-orange",
+    "image": "/images/menu/crepes-honey-orange.webp",
+    "alt": "Delicate warm crepes drizzled with golden thyme honey and fragrant orange zest",
+    "sizeKb": 52,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-double-chocolate-brownie",
+    "name": "Double Chocolate Brownie",
+    "slug": "double-chocolate-brownie",
+    "image": "/images/menu/double-chocolate-brownie.webp",
+    "alt": "Warm double chocolate fudge brownie served with velvety vanilla ice cream",
+    "sizeKb": 55,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-tiramisu",
+    "name": "Tiramisu",
+    "slug": "tiramisu",
+    "image": "/images/menu/tiramisu.webp",
+    "alt": "Traditional Italian tiramisu with espresso ladyfingers, mascarpone cream, and dark cocoa",
+    "sizeKb": 42,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-creme-caramel",
+    "name": "Crème Caramel",
+    "slug": "creme-caramel",
+    "image": "/images/menu/creme-caramel.webp",
+    "alt": "Smooth vanilla custard crème caramel with delicate amber caramel glaze",
+    "sizeKb": 37,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-strawberry-cheesecake",
+    "name": "Strawberry Cheesecake",
+    "slug": "strawberry-cheesecake",
+    "image": "/images/menu/strawberry-cheesecake.webp",
+    "alt": "Creamy homemade cheesecake slice topped with rich strawberry coulis",
+    "sizeKb": 30,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-muffin",
+    "name": "Muffin",
+    "slug": "artisan-muffin",
+    "image": "/images/menu/artisan-muffin.webp",
+    "alt": "Freshly baked bakery muffin loaded with vanilla and fresh berries",
+    "sizeKb": 39,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-ricotta-cannoli",
+    "name": "Ricotta Cannoli",
+    "slug": "ricotta-cannoli",
+    "image": "/images/menu/ricotta-cannoli.webp",
+    "alt": "Crisp pastry shell filled with sweet Sicilian ricotta and chocolate chips",
+    "sizeKb": 42,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-gelato-antica",
+    "name": "Gelato – Antica Gelateria del Corso",
+    "slug": "gelato-antica-del-corso",
+    "image": "/images/menu/gelato-antica-del-corso.webp",
+    "alt": "Artisanal Italian gelato scoops in a classic glass dessert bowl",
+    "sizeKb": 36,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-avo-egg-heaven",
+    "name": "Avo & Egg Heaven",
+    "slug": "avo-egg-heaven",
+    "image": "/images/menu/avo-egg-heaven.webp",
+    "alt": "Toasted sourdough with creamy mashed avocado, runny poached egg, and black sesame",
+    "sizeKb": 51,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-miso-scramble",
+    "name": "Miso Scrambled Eggs",
+    "slug": "miso-scrambled-eggs",
+    "image": "/images/menu/miso-scrambled-eggs.webp",
+    "alt": "Soft scrambled eggs on toasted sourdough with savory miso mayo and crispy onions",
+    "sizeKb": 76,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-morning-ranchero",
+    "name": "Morning Ranchero",
+    "slug": "morning-ranchero",
+    "image": "/images/menu/morning-ranchero.webp",
+    "alt": "Toasted sourdough with avocado mash, warm black bean salsa, and fresh herbs",
+    "sizeKb": 70,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-salmon-croissant",
+    "name": "Smoked Salmon & Cream Cheese Croissant",
+    "slug": "salmon-cream-cheese-croissant",
+    "image": "/images/menu/salmon-cream-cheese-croissant.webp",
+    "alt": "Flaky butter croissant filled with smoked salmon, herb cream cheese, dill, and capers",
+    "sizeKb": 157,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-parma-croissant",
+    "name": "Parma & Parmesan Croissant",
+    "slug": "parma-parmesan-croissant",
+    "image": "/images/menu/parma-parmesan-croissant.webp",
+    "alt": "Butter croissant stuffed with Parma ham, Grana Padano shavings, and fresh rocket",
+    "sizeKb": 111,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-ham-cheese-croissant",
+    "name": "Ham & Cheese Croissant",
+    "slug": "ham-cheese-croissant",
+    "image": "/images/menu/ham-cheese-croissant.webp",
+    "alt": "Warm flaky croissant with farmhouse ham and melted cheddar cheese",
+    "sizeKb": 76,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-ricotta-honey-croissant",
+    "name": "Ricotta & Honey Croissant",
+    "slug": "ricotta-honey-croissant",
+    "image": "/images/menu/ricotta-honey-croissant.webp",
+    "alt": "Golden croissant filled with whipped sweet ricotta and thyme honey",
+    "sizeKb": 73,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-blueberry-cheesecake-croissant",
+    "name": "Blueberry Cheesecake Croissant",
+    "slug": "blueberry-cheesecake-croissant",
+    "image": "/images/menu/blueberry-cheesecake-croissant.webp",
+    "alt": "Pastry croissant filled with vanilla cheesecake cream and marinated blueberries",
+    "sizeKb": 43,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-chocolate-strawberry-croissant",
+    "name": "Chocolate & Strawberry Croissant",
+    "slug": "chocolate-strawberry-croissant",
+    "image": "/images/menu/chocolate-strawberry-croissant.webp",
+    "alt": "Butter croissant filled with chocolate hazelnut spread and sliced strawberries",
+    "sizeKb": 76,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-pistachio-croissant",
+    "name": "Pistachio Croissant",
+    "slug": "pistachio-croissant",
+    "image": "/images/menu/pistachio-croissant.webp",
+    "alt": "Croissant generously filled and topped with Sicilian pistachio cream and roasted nuts",
+    "sizeKb": 73,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-butter-croissant",
+    "name": "Butter Croissant",
+    "slug": "butter-croissant",
+    "image": "/images/menu/butter-croissant.webp",
+    "alt": "Classic golden flaky all-butter French croissant baked in-house daily",
+    "sizeKb": 73,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-mortadella-pistachio-ciabatta",
+    "name": "Mortadella & Pistachio Ciabatta",
+    "slug": "mortadella-pistachio-ciabatta",
+    "image": "/images/menu/mortadella-pistachio-ciabatta.webp",
+    "alt": "Artisan ciabatta filled with Mortadella di Bologna, buffalo mozzarella, and crushed pistachios",
+    "sizeKb": 60,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-tuna-melt-ciabatta",
+    "name": "Tuna Melt Ciabatta",
+    "slug": "tuna-melt-ciabatta",
+    "image": "/images/menu/tuna-melt-ciabatta.webp",
+    "alt": "Warm pressed ciabatta with spiced tuna, red onions, gherkins, and melted Fior di Latte",
+    "sizeKb": 88,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-italian-garden-toastie",
+    "name": "Italian Garden Toastie",
+    "slug": "italian-garden-toastie",
+    "image": "/images/menu/italian-garden-toastie.webp",
+    "alt": "Toasted sourdough sandwich with basil pesto, buffalo mozzarella, and heirloom tomatoes",
+    "sizeKb": 46,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-ham-cheese-toastie",
+    "name": "Ham & Cheese Toastie",
+    "slug": "ham-cheese-toastie",
+    "image": "/images/menu/ham-cheese-toastie.webp",
+    "alt": "Classic golden grilled sourdough sandwich with smoked ham and mature melted cheddar",
+    "sizeKb": 54,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-vegan-burrito",
+    "name": "Vegan Burrito",
+    "slug": "vegan-burrito",
+    "image": "/images/menu/vegan-burrito.webp",
+    "alt": "Warm toasted wrap filled with Korean BBQ tofu, rice noodles, fresh slaw, and lime",
+    "sizeKb": 57,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-famous-chicken-wrap",
+    "name": "Famous Chicken Wrap",
+    "slug": "famous-chicken-wrap",
+    "image": "/images/menu/famous-chicken-wrap.webp",
+    "alt": "Warm chicken wrap with melted cheese, lettuce, tomato, pickles, garlic mayo, and crisps",
+    "sizeKb": 52,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-chicken-mayo-baguette",
+    "name": "Chicken Mayo Baguette",
+    "slug": "chicken-mayo-baguette",
+    "image": "/images/menu/chicken-mayo-baguette.webp",
+    "alt": "Crusty French baguette filled with shredded chicken, smoked paprika mayo, and slaw",
+    "sizeKb": 51,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-italian-sub",
+    "name": "Italian Sub",
+    "slug": "italian-sub",
+    "image": "/images/menu/italian-sub.webp",
+    "alt": "Loaded submarine sandwich with ham, salami, mortadella, provolone, and oregano dressing",
+    "sizeKb": 61,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-aperol-spritz",
+    "name": "Aperol Spritz",
+    "slug": "aperol-spritz",
+    "image": "/images/menu/aperol-spritz.webp",
+    "alt": "Vibrant Aperol Spritz cocktail with prosecco, soda, ice, and fresh orange slice",
+    "sizeKb": 27,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-hugo-spritz",
+    "name": "Hugo",
+    "slug": "hugo-spritz",
+    "image": "/images/menu/hugo-spritz.webp",
+    "alt": "Refreshing Hugo cocktail with elderflower liqueur, sparkling prosecco, mint, and lime",
+    "sizeKb": 42,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-sarti-spritz",
+    "name": "Sarti",
+    "slug": "sarti-spritz",
+    "image": "/images/menu/sarti-spritz.webp",
+    "alt": "Bright pink Sarti Rosa spritz mixed with bubbly prosecco and soda",
+    "sizeKb": 43,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-limoncello-spritz",
+    "name": "Limoncello",
+    "slug": "limoncello-spritz",
+    "image": "/images/menu/limoncello-spritz.webp",
+    "alt": "Sunny Italian Limoncello spritz mixed with prosecco, soda, and fresh lemon wheel",
+    "sizeKb": 37,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-campari-spritz",
+    "name": "Campari",
+    "slug": "campari-spritz",
+    "image": "/images/menu/campari-spritz.webp",
+    "alt": "Vivid red Campari spritz with prosecco, soda, and orange peel",
+    "sizeKb": 50,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-gin-tonic-twist",
+    "name": "Gin and Tonic Twist",
+    "slug": "gin-tonic-twist",
+    "image": "/images/menu/gin-tonic-twist.webp",
+    "alt": "Craft gin and tonic cocktail with fresh rosemary sprig and citrus twist",
+    "sizeKb": 43,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-margarita",
+    "name": "Margarita on the Rocks",
+    "slug": "margarita-on-the-rocks",
+    "image": "/images/menu/margarita-on-the-rocks.webp",
+    "alt": "Classic shaken margarita with salted rim and fresh lime wedge on the rocks",
+    "sizeKb": 34,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-cosmopolitan",
+    "name": "Cosmopolitan",
+    "slug": "cosmopolitan",
+    "image": "/images/menu/cosmopolitan.webp",
+    "alt": "Vibrant pink Cosmopolitan cocktail served in a chilled martini glass with lime",
+    "sizeKb": 25,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-espresso-martini",
+    "name": "Espresso Martini",
+    "slug": "espresso-martini",
+    "image": "/images/menu/espresso-martini.webp",
+    "alt": "Shaken vodka and coffee liqueur espresso martini crowned with velvety crema and 3 coffee beans",
+    "sizeKb": 38,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-negroni",
+    "name": "Negroni",
+    "slug": "negroni",
+    "image": "/images/menu/negroni.webp",
+    "alt": "Classic Italian Negroni cocktail over large crystal ice cube with orange twist",
+    "sizeKb": 43,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-milkshake",
+    "name": "Milkshake",
+    "slug": "classic-milkshake",
+    "image": "/images/menu/classic-milkshake.webp",
+    "alt": "Creamy artisan milkshake served in a tall glass with whipped cream",
+    "sizeKb": 44,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-power-shake",
+    "name": "Power Shake",
+    "slug": "power-shake",
+    "image": "/images/menu/power-shake.webp",
+    "alt": "Nutrient-rich green smoothie with fresh avocado, kale, banana, and lemon",
+    "sizeKb": 40,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-energy-boost",
+    "name": "Energy Boost",
+    "slug": "energy-boost-smoothie",
+    "image": "/images/menu/energy-boost-smoothie.webp",
+    "alt": "Vibrant antioxidant smoothie blended with raspberries, blueberries, and mango",
+    "sizeKb": 37,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-tropical-delight",
+    "name": "Tropical Delight",
+    "slug": "tropical-delight-smoothie",
+    "image": "/images/menu/tropical-delight-smoothie.webp",
+    "alt": "Golden tropical smoothie with passion fruit, peach, and ripe mango",
+    "sizeKb": 27,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-caribbean-breeze",
+    "name": "Caribbean Breeze",
+    "slug": "caribbean-breeze-smoothie",
+    "image": "/images/menu/caribbean-breeze-smoothie.webp",
+    "alt": "Exotic Caribbean smoothie blended with pineapple, strawberry, and coconut milk",
+    "sizeKb": 20,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-watermelon-splash",
+    "name": "Watermelon Splash",
+    "slug": "watermelon-splash-smoothie",
+    "image": "/images/menu/watermelon-splash-smoothie.webp",
+    "alt": "Refreshing chilled pink watermelon, strawberry, and lime smoothie",
+    "sizeKb": 44,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-acqua-panna",
+    "slug": "acqua-panna",
+    "status": "VERIFIED",
+    "image": "/images/menu/acqua-panna.webp",
+    "sizeKb": 23
+  },
+  {
+    "id": "prod-san-pellegrino",
+    "slug": "san-pellegrino",
+    "status": "VERIFIED",
+    "image": "/images/menu/san-pellegrino.webp",
+    "sizeKb": 73
+  },
+  {
+    "id": "prod-fresh-orange-juice",
+    "name": "Fresh Orange Juice",
+    "slug": "fresh-orange-juice",
+    "image": "/images/menu/fresh-orange-juice.webp",
+    "alt": "Tall glass of 100% freshly squeezed orange juice served over ice",
+    "sizeKb": 29,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-soft-drinks",
+    "name": "Soft Drinks",
+    "slug": "soft-drinks",
+    "image": "/images/menu/soft-drinks.webp",
+    "alt": "Chilled glass bottle of Coca Cola with ice and fresh lemon wheel",
+    "sizeKb": 81,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-fruit-juices",
+    "name": "Fruit Juices",
+    "slug": "fruit-juices",
+    "image": "/images/menu/fruit-juices.webp",
+    "alt": "Cold pressed pure fruit juice in clear glassware",
+    "sizeKb": 22,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-iced-tea",
+    "name": "Iced Tea",
+    "slug": "iced-tea",
+    "image": "/images/menu/iced-tea.webp",
+    "alt": "Tall refreshing glass of peach and lemon iced tea with mint leaves",
+    "sizeKb": 34,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-espresso",
+    "name": "Espresso",
+    "slug": "espresso-single",
+    "image": "/images/menu/espresso-single.webp",
+    "alt": "Single shot espresso in classic white ceramic cup with thick hazelnut crema",
+    "sizeKb": 63,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-double-espresso",
+    "name": "Double Espresso",
+    "slug": "double-espresso",
+    "image": "/images/menu/double-espresso.webp",
+    "alt": "Bold double shot espresso doppio with dark aromatic crema",
+    "sizeKb": 28,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-espresso-macchiato",
+    "name": "Espresso Macchiato",
+    "slug": "espresso-macchiato",
+    "image": "/images/menu/espresso-macchiato.webp",
+    "alt": "Espresso shot topped with a cloud of silky textured milk foam",
+    "sizeKb": 35,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-americano",
+    "name": "Americano",
+    "slug": "americano-coffee",
+    "image": "/images/menu/americano-coffee.webp",
+    "alt": "Freshly pulled Americano long black coffee in ceramic mug",
+    "sizeKb": 63,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-flat-white",
+    "name": "Flat White",
+    "slug": "flat-white-specialty",
+    "image": "/images/menu/flat-white-specialty.webp",
+    "alt": "Specialty flat white coffee with silky microfoam latte art",
+    "sizeKb": 35,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-cappuccino",
+    "name": "Cappuccino",
+    "slug": "artisan-cappuccino",
+    "image": "/images/menu/artisan-cappuccino.webp",
+    "alt": "Italian cappuccino with thick milk foam dusted with cocoa powder",
+    "sizeKb": 63,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-cafe-latte",
+    "name": "Café Latte",
+    "slug": "cafe-latte",
+    "image": "/images/menu/cafe-latte.webp",
+    "alt": "Steamed milk café latte with delicate layered espresso and foam",
+    "sizeKb": 44,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-iced-coffee",
+    "name": "Iced Coffee",
+    "slug": "iced-coffee",
+    "image": "/images/menu/iced-coffee.webp",
+    "alt": "Chilled iced coffee poured over cold milk and ice cubes in glass",
+    "sizeKb": 24,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-whittington-tea",
+    "name": "Whittington Tea Selection",
+    "slug": "whittington-tea",
+    "image": "/images/menu/whittington-tea.webp",
+    "alt": "Premium Whittington loose leaf tea infusion in porcelain teapot and cup",
+    "sizeKb": 52,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-eraclea-hot-chocolate",
+    "name": "Eraclea Thick Hot Chocolate",
+    "slug": "eraclea-hot-chocolate",
+    "image": "/images/menu/eraclea-hot-chocolate.webp",
+    "alt": "Ultra-thick Italian spoon-coating hot chocolate in ceramic cup",
+    "sizeKb": 26,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-affogato",
+    "name": "Affogato",
+    "slug": "affogato",
+    "image": "/images/menu/affogato.webp",
+    "alt": "Scoop of velvety vanilla gelato drowned in a freshly pulled shot of hot espresso",
+    "sizeKb": 31,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-sparkling-wine",
+    "name": "Sparkling Wine",
+    "slug": "sparkling-wine-prosecco",
+    "image": "/images/menu/sparkling-wine-prosecco.webp",
+    "alt": "Chilled flute of Italian Bottega DOC Prosecco with rising effervescence",
+    "sizeKb": 33,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-white-wine",
+    "name": "White Wine",
+    "slug": "white-wine-anthilia",
+    "image": "/images/menu/white-wine-anthilia.webp",
+    "alt": "Elegant glass of chilled Sicilian Anthìlia DOC Donnafugata white wine",
+    "sizeKb": 17,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-red-wine",
+    "name": "Red Wine",
+    "slug": "red-wine-sedara",
+    "image": "/images/menu/red-wine-sedara.webp",
+    "alt": "Deep ruby red Sedàra DOC Donnafugata wine in large stem goblet",
+    "sizeKb": 30,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-rose-wine",
+    "name": "Rosé Wine",
+    "slug": "rose-wine-lumera",
+    "image": "/images/menu/rose-wine-lumera.webp",
+    "alt": "Chilled pale pink Sicilian Lumèra DOC Donnafugata rosé wine in glass",
+    "sizeKb": 32,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-cisk-lager",
+    "name": "Cisk Lager",
+    "slug": "cisk-lager-malta",
+    "image": "/images/menu/cisk-lager-malta.webp",
+    "alt": "Malta's iconic golden Cisk Lager served cold in a chalice glass with creamy foam",
+    "sizeKb": 24,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-heineken",
+    "name": "Heineken",
+    "slug": "heineken-beer",
+    "image": "/images/menu/heineken-beer.webp",
+    "alt": "Cold green Heineken bottle served with chilled pilsner glass and head",
+    "sizeKb": 21,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-heineken-zero",
+    "name": "Heineken 0.0",
+    "slug": "heineken-zero",
+    "image": "/images/menu/heineken-zero.webp",
+    "alt": "Chilled non-alcoholic Heineken 0.0 lager poured with thick white collar",
+    "sizeKb": 61,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-moretti",
+    "name": "Moretti",
+    "slug": "birra-moretti",
+    "image": "/images/menu/birra-moretti.webp",
+    "alt": "Authentic Italian Birra Moretti lager poured into a cold beer glass",
+    "sizeKb": 43,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-corona",
+    "name": "Corona",
+    "slug": "corona-extra",
+    "image": "/images/menu/corona-extra.webp",
+    "alt": "Cold bottle of Corona Extra with fresh lime wedge in the neck",
+    "sizeKb": 71,
+    "status": "VERIFIED"
+  },
+  {
+    "id": "prod-strongbow-cider",
+    "name": "Strongbow Cider",
+    "slug": "strongbow-cider",
+    "image": "/images/menu/strongbow-cider.webp",
+    "alt": "Crisp golden sparkling apple cider poured over ice cubes in a pint glass",
+    "sizeKb": 70,
+    "status": "VERIFIED"
+  }
+]

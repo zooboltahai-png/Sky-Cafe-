@@ -88,9 +88,8 @@ export const MenuPage: React.FC = () => {
         
         {/* Page Hero Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 pt-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-brand-green/20 border border-brand-green/40 text-brand-burgundy rounded-full text-xs font-bold uppercase tracking-wider">
-            <Sparkles className="w-3.5 h-3.5 text-brand-burgundy" />
-            <span>Mediterranean Cafe in Sliema</span>
+          <div className="text-xs font-bold uppercase tracking-widest text-brand-burgundy">
+            Mediterranean Cafe & Eatery · Sliema Waterfront, Malta
           </div>
 
           <h1 className="font-editorial text-4xl sm:text-5xl font-bold text-stone-900 tracking-tight">

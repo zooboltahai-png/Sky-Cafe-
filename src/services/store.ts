@@ -2,7 +2,7 @@ import { Product, BusinessSettings, CartItem, Order, OrderStatus, ContactMessage
 import { INITIAL_PRODUCTS, INITIAL_SETTINGS } from '../data/initialData';
 
 const STORAGE_KEYS = {
-  PRODUCTS: 'skyline_products_v6',
+  PRODUCTS: 'skyline_products_v7',
   SETTINGS: 'skyline_settings_v1',
   CART: 'skyline_cart_v1',
   ORDERS: 'skyline_orders_v1',
@@ -44,14 +44,14 @@ export function getProducts(): Product[] {
     // Normalize and ensure each product has valid image and imageAlt
     const normalized = parsed.map(p => {
       const initial = INITIAL_PRODUCTS.find(i => i.id === p.id);
-      let img = p.image || (initial ? initial.image : '/images/brand/skyline_hero_sliema.jpg');
+      let img = initial ? initial.image : (p.image || '/images/brand/skyline_hero_sliema.jpg');
       if (img.startsWith('/src/assets/images/')) {
         img = img.replace('/src/assets/images/', '/images/menu/');
       }
       return {
         ...p,
         image: img,
-        imageAlt: p.imageAlt || (initial ? initial.imageAlt : p.name),
+        imageAlt: (initial && initial.imageAlt) || p.imageAlt || p.name,
         allergens: p.allergens || (initial ? initial.allergens : []),
         options: p.options || (initial ? initial.options : undefined),
         priceLabel: p.priceLabel || (initial ? initial.priceLabel : undefined)
